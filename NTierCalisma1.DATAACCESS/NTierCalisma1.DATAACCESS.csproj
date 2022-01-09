@@ -18,8 +18,4 @@
     <ProjectReference Include="..\NTierCalisma1.ENTITIES\NTierCalisma1.ENTITIES.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\Concrete\PrivateRepository\" />
-  </ItemGroup>
-
 </Project>
