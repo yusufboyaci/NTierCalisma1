@@ -19,11 +19,11 @@ namespace NTierCalisma1.DATAACCESS.Repositories.Concrete.MainRepository
         {
             _context = context;
         }
-        public bool Activate(Guid id)
+        public async Task<bool> Activate(Guid id)
         {
             T activated = GetById(id);
             activated.Status = Status.Active;
-            return Update(activated);
+            return await Update(activated);
         }
 
         public bool Add(T item)
@@ -136,7 +136,7 @@ namespace NTierCalisma1.DATAACCESS.Repositories.Concrete.MainRepository
             return _context.SaveChanges();
         }
 
-        public bool Update(T item)
+        public async Task<bool> Update(T item)
         {
             try
             {
