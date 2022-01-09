@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NTierCalisma1.CORE.Entity.Concrete
 {
-    internal class CoreEntity : IEntity<Guid>
+    public class CoreEntity : IEntity<Guid>
     {
         public CoreEntity()
         {

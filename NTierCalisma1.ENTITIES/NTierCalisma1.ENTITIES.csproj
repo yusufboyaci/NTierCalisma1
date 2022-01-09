@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NTierCalisma1.CORE\NTierCalisma1.CORE.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace NTierCalisma1.CORE.Mapping
 {
-    internal class CoreMap<T> : IEntityTypeConfiguration<T> where T : CoreEntity
+    public class CoreMap<T> : IEntityTypeConfiguration<T> where T : CoreEntity
     {
-        public void Configure(EntityTypeBuilder<T> builder)
+        public virtual void Configure(EntityTypeBuilder<T> builder)
         {
             builder.HasKey(x => x.ID);
             builder.Property(x => x.ID).HasColumnName("ID");

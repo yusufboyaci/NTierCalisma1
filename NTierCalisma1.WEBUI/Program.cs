@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using NTierCalisma1.DATAACCESS.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("server=.;database=NtierCalisma1DB;uid=yusuf;pwd=123"));
+
 
 var app = builder.Build();
 
