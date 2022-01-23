@@ -10,7 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("server=.;database=NtierCalisma1DB;uid=yusuf;pwd=123"));
+//builder.Services.AddScoped<IRepository<User>, Repository<User>();
 builder.Services.AddScoped<IRepository<User>, UserRepository>();
+builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
+builder.Services.AddScoped<IRepository<Order>, OrderRepository>();
+builder.Services.AddScoped<IRepository<OrderDetail>, OrderDetailRepository>();
+builder.Services.AddScoped<IRepository<Category>, CategoryRepository>();
 
 
 var app = builder.Build();
